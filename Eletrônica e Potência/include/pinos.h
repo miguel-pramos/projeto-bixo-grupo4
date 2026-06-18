@@ -1,0 +1,1 @@
+// aqui vamos definir os pinos para que sejam lidos com melhor semântica
