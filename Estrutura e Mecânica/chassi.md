@@ -27,4 +27,5 @@ Essa medida foi escolhida com base no tamanho do motor, do pneu e da ponte H (2*
 
 #### Detalhes 
 Determinamos um retângulo de 2,5 cm x 6,5 cm de cada lado para alocar as rodas, de forma que elas não fiquem com uma parte grande para fora do restante da estrutura.
-Entre estes retângulos, no centro da parte posterior do chassi, foi projetada uma abertura quadrada no chassi acompanhada de uma elevação perimetral, desenvolvida com o objetivo de permitir que a ponte H fosse parafusada em uma posição elevada em relação ao plano principal do chassi.
+Entre estes retângulos, no centro da parte posterior do chassi, foi projetada uma abertura quadrada no chassi acompanhada de uma elevação perimetral (medida quadrado externo: 4.4, medida do quadrado interno: 3.1), desenvolvida com o objetivo de permitir que a ponte H fosse parafusada em uma posição elevada em relação ao plano principal do chassi.
+Em frente a ponte H, outra elevação foi colocada a fim de posicionar o sensor ultrassônico. Dessa forma, há espaço para os fios e a captação de estímulos é aprimorada, já que, desse modo, não há outros elementos do carrinho em seu caminho que poderiam comprometer a detecção de objetos na trajetória.
