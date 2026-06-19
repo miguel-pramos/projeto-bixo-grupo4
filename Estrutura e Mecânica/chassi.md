@@ -14,7 +14,7 @@
 - Motor: 7.1 cm x 1.8 cm (parte amarela) x ou 2.0 cm (parte amarela) 
 - Ponte H: 4.3 cm x 4.3 cm x 2.5 cm (parte preta) ou 1.2 cm (parte azul)
 - Sensor ultrassônico: 4.5cm x 2.0 cm x 1.4 cm 
-- Interruptor: 2cm x 1.5cm x 1.96cm
+- Interruptor: 2.1 cm x 1.5cm x 2.2cm
 
 ## Chassi
 
