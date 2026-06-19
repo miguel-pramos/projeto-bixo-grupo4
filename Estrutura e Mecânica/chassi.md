@@ -24,4 +24,7 @@ Essa medida foi escolhida com base no tamanho do motor, do pneu e da ponte H (2*
 
 #### Comprimento total: 
 1.5cm do parachoque, 7.1cm do motor, 1cm de folga, 14.4 da placa padrão, 1cm do interruptor e 2cm de folga geral = 27cm
-Determinamos um retângulo de 2,5 cm x 6,5 cm de cada lado para alocar as rodas, de forma que elas não fiquem com uma parte grande para fora do restante da estrutura. 
+
+#### Detalhes 
+Determinamos um retângulo de 2,5 cm x 6,5 cm de cada lado para alocar as rodas, de forma que elas não fiquem com uma parte grande para fora do restante da estrutura.
+Entre estes retângulos, no centro da parte posterior do chassi, foi projetada uma abertura quadrada no chassi acompanhada de uma elevação perimetral, desenvolvida com o objetivo de permitir que a ponte H fosse parafusada em uma posição elevada em relação ao plano principal do chassi.
