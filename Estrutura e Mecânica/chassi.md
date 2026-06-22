@@ -32,12 +32,14 @@ Ao lado dos recortes maiores, encontram-se quatro pequenos furos: dois mais pró
 
 No centro da parte posterior do chassi, foi projetada uma abertura quadrada no chassi acompanhada de uma elevação perimetral (medida quadrado externo: 4.4, medida do quadrado interno: 3.1), desenvolvida com o objetivo de permitir que a ponte H fosse parafusada em uma posição elevada em relação ao plano principal do chassi de modo a garantir que a parte inferior, com soldas, não encostasse em nada que pudesse prejudicar seu funcionamento.
 
-À frente da ponte H será posicionado o sensor ultrassônico. Como seus pinos de conexão e fios ficarão voltados para a parte traseira do carrinho, não será necessária a criação de uma segunda elevação para acomodá-los.
+À frente da ponte H será posicionado o sensor ultrassônico. Como seus pinos de conexão e fios ficarão voltados para a parte traseira do carrinho, foi possível criar apenas um pequeno recorte na estrutura que o sustenta para acomodá-lo.
 
 Por questões estéticas, uma vez que o sensor funciona como os “olhos” do robô, foram adicionados elementos circulares ao redor de sua posição. Além de contribuir para a aparência do projeto, esses elementos auxiliam na fixação e no correto posicionamento do sensor.
 
-Sua localização foi escolhida de forma a minimizar a distância até possíveis obstáculos presentes na trajetória do carrinho, aumentando a rapidez e a precisão da detecção. Adicionalmente, tomou-se o cuidado de não posicionar nenhum componente à frente do sensor, evitando interferências em seu campo de visão e garantindo o pleno funcionamento do sistema.
+Sua localização foi escolhida de forma a minimizar a distância até possíveis obstáculos presentes na trajetória do carrinho, aumentando a rapidez e a precisão da detecção. Adicionalmente, tomou-se o cuidado de não posicionar nenhum componente à frente do sensor, evitando interferências em seu campo de visão e garantindo o pleno funcionamento do sistema. 
 
 Atrás da ponte H, observa-se a presença de um recorte retangular e dois furos circulares. Esses elementos foram projetados para acomodar o interruptor e permitir a passagem dos fios de alimentação conectados a ele.
+
+Na parte traseira do chassi, há mais uma elevação destinada a acomodar a placa padrão.
 
 As dimensões adotadas no projeto foram definidas com base nas medidas obtidas experimentalmente no laboratório, garantindo a compatibilidade entre o modelo desenvolvido e os componentes físicos utilizados na montagem do carrinho.
