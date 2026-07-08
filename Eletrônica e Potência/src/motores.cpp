@@ -1,15 +1,5 @@
 #include <Arduino.h>
-
-// Analógicos
-#define ENA 1
-#define ENB 2
-// Digitais
-// Motor 1
-#define IN1 3
-#define IN2 4
-// Motor 2
-#define IN3 5
-#define IN4 6
+#include <pinos.h>
 
 void motores_init()
 {

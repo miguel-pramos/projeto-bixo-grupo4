@@ -1,0 +1,2 @@
+void setupEncoder();
+void printEncoderSignals();
