@@ -25,5 +25,12 @@ Assim como ocorreu com a ponte H, o chassi já possuía uma elevação destinada
 
 ### Motores, encoders e rodas
 
+Conforme previsto no planejamento do chassi, os motores foram fixados na parte inferior por meio de quatro suportes em formato de **T**, cada um com dois furos para a passagem dos parafusos de fixação. Juntamente com os motores, e voltados para a parte interna do chassi, foram aparafusados os encoders, responsáveis pelo monitoramento da rotação das rodas.
+
+As rodas foram encaixadas diretamente nos eixos dos motores. No entanto, como apresentavam uma pequena folga, foi aplicada fita crepe ao redor dos pinos brancos de encaixe, aumentando o atrito entre as peças. Essa solução proporcionou uma fixação mais firme, reduzindo o risco de as rodas se desprenderem durante o deslocamento do carrinho.
 
 ## Pinagem e conexões
+
+### Da ponte H ao ESP
+### Dos motores a ponte H
+### Dos encoders ao ESP
