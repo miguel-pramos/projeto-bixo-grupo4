@@ -9,7 +9,7 @@
 Para garantir melhor condução elétrica, será necessário soldar os pinos metálicos ao ESP utilizando solda à base de estanho. Durante esse processo, tomamos cuidado para que a solda de um pino não encostasse na do seu adjacente nem em outros componentes do ESP, pois isso poderia provocar curtos-circuitos e comprometer o funcionamento do sistema.
 
 ### Diagrama do circuito
-![Diagrama de ligação do carrinho](Carrinho.drawio.png)
+![Diagrama de ligação do carrinho](pinagem.drawio.png)
 
 
 
