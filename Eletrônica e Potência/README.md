@@ -15,9 +15,15 @@ Para garantir melhor condução elétrica, será necessário soldar os pinos met
 
 Antes da instalação da ponte H, o chassi já possuía uma elevação projetada especificamente para seu posicionamento, contendo quatro furos para a fixação por meio de quatro parafusos e quatro porcas. Entretanto, essa elevação entrava em contato com os pinos soldados na parte inferior da ponte H. Para evitar esse contato, foram utilizadas porcas como espaçadores entre a elevação do chassi e a ponte H, mantendo-a ligeiramente elevada. Dessa forma, garantiu-se que nenhum componente da placa encostasse no chassi, evitando possíveis interferências mecânicas ou elétricas que poderiam comprometer seu funcionamento.
 
-### Baterias
+### Pilhas
+
+Antes da fixação, foi soldado um fio conectando uma pilha à outra, o que exigia que ambas permanecessem posicionadas lado a lado. Em seguida, as pilhas foram acomodadas ao lado da placa padrão e fixadas ao chassi utilizando cola quente
+
 ### Placa Padrão
+
+Assim como ocorreu com a ponte H, o chassi já possuía uma elevação destinada ao posicionamento da placa padrão. Para fixá-la nessa região, foi utilizada cola quente, garantindo sua estabilidade. Sobre a placa padrão, será instalado o ESP, que será encaixado em pinos de suporte (headers), permitindo sua remoção, se necessário.
+
+### Motores, encoders e rodas
 
 
 ## Pinagem e conexões
-
