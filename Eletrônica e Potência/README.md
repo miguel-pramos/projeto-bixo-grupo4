@@ -32,5 +32,15 @@ As rodas foram encaixadas diretamente nos eixos dos motores. No entanto, como ap
 ## Pinagem e conexões
 
 ### Da ponte H ao ESP
+
+Os pinos ENA e ENB da ponte H foram conectados, respectivamente, aos pinos 1 e 2 do ESP. Da mesma forma, os pinos IN1, IN2, IN3 e IN4 da ponte H foram ligados, respectivamente, aos pinos 3, 4, 5 e 6 do microcontrolador. Essas conexões permitem que o ESP envie os sinais responsáveis pelo controle da velocidade e do sentido de rotação dos motores.
+
+Na ponte H, foram utilizados conectores macho para o encaixe dos jumpers, facilitando a montagem e eventuais manutenções. Já no lado do ESP, os fios foram desencapados e soldados à placa padrão usando estanho.
+
 ### Dos motores a ponte H
+
+De cada motor saem dois fios, que já estavam soldados aos seus terminais. Esses fios foram conectados aos bornes de saída da ponte H, localizados nos conectores azuis, onde são fixados por meio do aperto dos parafusos superiores. Os dois fios de cada motor foram ligados ao mesmo canal da ponte H, mantendo cada motor conectado a um lado independente da ponte para possibilitar o controle individual de ambos.
+
 ### Dos encoders ao ESP
+
+De cada encoder saem quatro fios: dois destinados à alimentação elétrica, conectados aos terminais de 5 V e GND, e dois responsáveis pela transmissão dos sinais gerados pelo sensor. Os fios de sinal de um dos encoders foram conectados aos pinos 7 e 8 do ESP, enquanto os do outro encoder foram ligados aos pinos 9 e 10. Todas as conexões entre os encoders e o ESP foram realizadas por meio de solda na placa padrão.
