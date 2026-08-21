@@ -17,6 +17,13 @@
 #define MOT_DIR_IN1 8
 #define MOT_DIR_IN2 9
 
+// Extras
+int num_dentes = 11;
+float dist_rodas = 11.3; // Entre os eixos
+float diametro_rodas = 6.5;
+float raio = 3.25;
+float pi = 3.1415; 
+
 // ==========================================
 // 2. VARIAVEIS GLOBAIS DE SISTEMA
 // ==========================================
