@@ -18,12 +18,11 @@
 #define MOT_DIR_IN2 9
 
 // Extras
-int num_dentes = 11;
+int num_dentes = 10;
 float dist_rodas = 11.3; // Entre os eixos
-float diametro_rodas = 6.5;
-float raio = 3.25;
+float diametro_rodas = 6.5; // Centímetros
+float raio = 3.25; // Centímetros
 float pi = 3.1415; 
-float velocidade_linear, velocidade_angular, angular_centro;
 
 // ==========================================
 // 2. VARIAVEIS GLOBAIS DE SISTEMA
@@ -86,12 +85,28 @@ void calcula_odometria() {
   noInterrupts();
   long ticks_atuais_esq = ticks_esq;
   long ticks_atuais_dir = ticks_dir;
+  ticks_esq = 0;
+  ticks_dir = 0;
   interrupts();
 
   int tempo;
+  float distancia_esq, distancia_dir;
+  float v_angular_direita, v_angular_robo, v_angular_esquerda;
+  float velocidade_linear;
+  distancia_dir = 2*pi*raio*(ticks_atuais_dir/num_dentes);
+  distancia_esq = 2*pi*raio*(ticks_atuais_esq/num_dentes); 
   tempo = INTERVALO_AMOSTRAGEM_MS / 1000; // Tempo em segundos;
-  velocidade_angular = (ticks_atuais_dir - ticks_atuais_esq) / (tempo * distancia_entre_rodas);
   
+  v_angular_direita = distancia_dir/(raio*tempo);
+  v_angular_esquerda = distancia_esq/(raio*tempo);
+  velocidade_linear = (distancia_dir + distancia_esq)/(2 * tempo);
+  v_angular_robo = (ticks_atuais_dir - ticks_atuais_esq) / (tempo * distancia_entre_rodas);
+
+  Serial.println(v_angular_direita);
+  Serial.println(v_angular_esquerda);
+  Serial.println(velocidade_linear);
+  Serial.println(v_angular_robo);
+
   // TODO (Aula 3): Com os ticks atuais e o tempo percorrido (INTERVALO_AMOSTRAGEM_MS),
   // calculem a Velocidade Angular de cada roda (rad/s).
   // Em seguida, calculem a Velocidade Linear (m/s) e Angular (rad/s) do centro do robo.
