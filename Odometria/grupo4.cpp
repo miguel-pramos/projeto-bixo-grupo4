@@ -23,6 +23,7 @@ float dist_rodas = 11.3; // Entre os eixos
 float diametro_rodas = 6.5;
 float raio = 3.25;
 float pi = 3.1415; 
+float velocidade_linear, velocidade_angular, angular_centro;
 
 // ==========================================
 // 2. VARIAVEIS GLOBAIS DE SISTEMA
@@ -86,6 +87,10 @@ void calcula_odometria() {
   long ticks_atuais_esq = ticks_esq;
   long ticks_atuais_dir = ticks_dir;
   interrupts();
+
+  int tempo;
+  tempo = INTERVALO_AMOSTRAGEM_MS / 1000; // Tempo em segundos;
+  velocidade_angular = (ticks_atuais_dir - ticks_atuais_esq) / (tempo * distancia_entre_rodas);
   
   // TODO (Aula 3): Com os ticks atuais e o tempo percorrido (INTERVALO_AMOSTRAGEM_MS),
   // calculem a Velocidade Angular de cada roda (rad/s).
