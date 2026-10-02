@@ -30,8 +30,10 @@
 
 // Extras
 int num_dentes = 10;
-float diametro_rodas = 6.5f; // Centímetros
-float pi = 3.1415f; 
+float dist_rodas = 11.3; // Entre os eixos
+float diametro_rodas = 6.5; // Centímetros
+float raio = 3.25; // Centímetros
+float pi = 3.1415; 
 float Velocidades[2];
 
 // Variáveis de Tempo e Velocidade
@@ -49,25 +51,6 @@ double kd = 1.0;
 // Variáveis PID
 double erroIntegral = 0;
 double erroAnterior = 0;
-
-// ==========================================
-// 2. VARIAVEIS GLOBAIS DE SISTEMA
-// ==========================================
-// O termo 'volatile' informa ao compilador que a variavel pode mudar a qualquer momento 
-// fora do fluxo normal do codigo (ou seja, dentro das interrupcoes).
-volatile long ticks_esq = 0;
-volatile long ticks_dir = 0;
-
-// Variaveis para garantir que o loop principal rode em frequencia fixa (Sem delay!)
-unsigned long tempo_anterior = 0;
-const int INTERVALO_AMOSTRAGEM_MS = 50; // Roda o controle a 20Hz
-
-
-// ==========================================
-// 1B. GEOMETRIA DO ROBO (AJUSTAR conforme o chassi do time)
-// ==========================================
-const float DISTANCIA_ENTRE_RODAS_M = 0.113f; // "L", distancia entre as rodas esquerda/direita (m)
-const float RAIO_RODA_M = 0.0325f;             // "R", raio da roda (m)
 
 // Limites de seguranca para os comandos de velocidade (AJUSTAR conforme o robo)
 const float VEL_LINEAR_MAX_MS = 0.3f;   // m/s
@@ -153,7 +136,7 @@ void IRAM_ATTR isr_encoder_dir() {
 // ==========================================
 // 5. FUNcOES DE CALCULO E CONTROLE (AULAS 3 E 4)
 // ==========================================
-void calcula_odometria() {
+void calcula_odometria(float Velocidades[2]) {
  // O resgate de variaveis volatile precisa ser rapido. 
   // Desligamos as interrupcoes por um microssegundo para copiar os valores e nao corromper os dados.
   noInterrupts();
@@ -315,11 +298,11 @@ void aplica_velocidade(float v, float w) {
   v = constrain(v, -VEL_LINEAR_MAX_MS, VEL_LINEAR_MAX_MS);
   w = constrain(w, -VEL_ANGULAR_MAX_RADS, VEL_ANGULAR_MAX_RADS);
 
-  float vel_linear_esq = v - (w * DISTANCIA_ENTRE_RODAS_M / 2.0f);
-  float vel_linear_dir = v + (w * DISTANCIA_ENTRE_RODAS_M / 2.0f);
+  float vel_linear_esq = v - (w * dist_rodas / 2.0f);
+  float vel_linear_dir = v + (w * dist_rodas / 2.0f);
 
-  setpoint_omega_esq = vel_linear_esq / RAIO_RODA_M;
-  setpoint_omega_dir = vel_linear_dir / RAIO_RODA_M;
+  setpoint_omega_esq = vel_linear_esq / raio;
+  setpoint_omega_dir = vel_linear_dir / raio;
 }
 
 // Assina geometry_msgs/Twist em "cmd_vel": usa linear.x como v e angular.z como w.
@@ -420,7 +403,6 @@ void loop() {
   // Verifica se ja passou o tempo necessario (ex: 50ms) para rodar o controle novamente
   if (tempo_atual - tempo_anterior >= INTERVALO_AMOSTRAGEM_MS) {
 
-    calcula_odometria();
     calcula_odometria(Velocidades);
     logicaPIDdireita(Velocidades[0]);
     logicaPIDesquerda(Velocidades[1]);
